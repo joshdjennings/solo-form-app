@@ -3,9 +3,9 @@ import { Switch, Route } from 'react-router-dom';
 import NavBar from './NavBar';
 import Home from './Home';
 import About from './About';
-import ProjectList from './ProjectList';
-import ProjectDetail from './ProjectDetail';
-import SoloForms from './SoloForms';
+import SoloEntryForm from './SoloEntryForm';
+import JudgeForm from './JudgeForm';
+import Results from './Results';
 import './App.css';
 
 function App() {
@@ -16,11 +16,14 @@ function App() {
 				<Route path="/about">
 					<About />
 				</Route>
-				<Route exact path="/projects">
-					<ProjectList />
+				<Route exact path="/results">
+					<Results />
 				</Route>
-				<Route path="/projects/:id">
-					<ProjectDetail />
+				<Route path="/entryform">
+					<SoloEntryForm />
+				</Route>
+				<Route path="/judgeform">
+					<JudgeForm />
 				</Route>
 				<Route exact path="/">
 					<Home />

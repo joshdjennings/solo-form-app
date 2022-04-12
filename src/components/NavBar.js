@@ -8,7 +8,9 @@ function NavBar() {
 				Home
 			</NavLink>
 			<NavLink to="/about">About</NavLink>
-			<NavLink to="/projects">Projects</NavLink>
+			<NavLink to="/entryform">Solo Entry</NavLink>
+			<NavLink to="/judgeform">Judge's Forms</NavLink>
+			<NavLink to="/results">Results</NavLink>
 		</nav>
 	);
 }
