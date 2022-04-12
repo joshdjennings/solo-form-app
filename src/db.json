@@ -4,19 +4,43 @@
 			"id": 1,
 			"name": "Clair Omar Musser",
 			"solo": "Op 6 No 9",
-			"Instrument": "Marimba"
+			"instrument": "Marimba",
+			"memory": "",
+			"tone": "",
+			"technique": "",
+			"musicianship": "",
+			"comments": "",
+			"rating": "",
+			"outstanding": "",
+			"judge": ""
 		},
 		{
 			"id": 2,
 			"name": "John S. Pratt",
 			"solo": "Drum Corps on the March",
-			"Instrument": "Snare Drum"
+			"Instrument": "Snare Drum",
+			"memory": "",
+			"tone": "",
+			"technique": "",
+			"musicianship": "",
+			"comments": "",
+			"rating": "",
+			"outstanding": "",
+			"judge": ""
 		},
 		{
 			"id": 3,
 			"name": "Giovanni Hidalgo",
 			"solo": "Conga Madness",
-			"Instrument": "Congas"
+			"Instrument": "Congas",
+			"memory": "",
+			"tone": "",
+			"technique": "",
+			"musicianship": "",
+			"comments": "",
+			"rating": "",
+			"outstanding": "",
+			"judge": ""
 		}
 	]
 }
