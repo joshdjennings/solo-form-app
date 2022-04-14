@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { UseState, UseEffect } from 'react';
 
 function SoloEntryForm() {
 	return (
