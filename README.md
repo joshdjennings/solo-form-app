@@ -1,3 +1,13 @@
+# Hierarchy
+
+APP
+|--Home Page
+|----Solo Page State
+|------Search
+|----Solo Entry Form State, Post
+|----Collection
+|--------Card
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

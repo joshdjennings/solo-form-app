@@ -1,5 +1,4 @@
 import React from 'react';
-import SoloList from './SoloList';
 
 function Home() {
 	return (
@@ -17,9 +16,6 @@ function Home() {
 				</a>
 				.
 			</p>
-			<div>
-				<SoloList />
-			</div>
 		</section>
 	);
 }

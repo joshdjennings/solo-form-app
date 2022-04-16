@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Search from './Search';
-// import SoloEntryForm from './SoloEntryForm';
-import SoloList from './SoloList';
+// import SoloCollection from './SoloPage';
 
 function Results() {
 	const [solos, setSolos] = useState([]);
@@ -17,38 +16,8 @@ function Results() {
 		return setSearch(event.target.value);
 	}
 
-	const displayedSolos = () => {
-		return solos.filter((s) => s.name.includes(search.toLowerCase()));
-	};
-
-	// const addNewSolo = (soloData) => {
-	// 	const dataToSend = {
-	// 		...soloData,
-	// 		feedback: {
-	// 			memory: soloData.memory,
-	// 			tone: soloData.tone,
-	// 			technique: soloData.technique,
-	// 			musicianship: soloData.musicianship,
-	// 			comments: soloData.comments,
-	// 			rating: soloData.rating,
-	// 			outstanding: soloData.ouststanding,
-	// 			judge: soloData.judge,
-	// 		},
-	// 	};
-	// 	// delete dataToSend.frontUrl;
-	// 	// delete dataToSend.backUrl;
-
-	// 	const configObj = {
-	// 		method: 'POST',
-	// 		headers: {
-	// 			'Content-Type': 'application/json',
-	// 		},
-	// 		body: JSON.stringify(dataToSend),
-	// 	};
-
-	// 	fetch('http://localhost:3005/solo_information', configObj)
-	// 		.then((r) => r.json())
-	// 		.then((solos) => setSolos((mUV) => [...mUV, solos]));
+	// const displayedSolos = () => {
+	// 	return solos.filter((s) => s.name.includes(search.toLowerCase()));
 	// };
 
 	return (
@@ -56,10 +25,8 @@ function Results() {
 			<h1>Results</h1>
 			<p>Here are the Results</p>
 
-			<div>
-				{/* <SoloEntryForm addNewSolo={addNewSolo} /> */}
-				<Search search={search} handleSearch={handleSearch} />
-			</div>
+			<Search search={search} handleSearch={handleSearch} />
+			{/* <SoloCollection solos={displayedSolos} /> */}
 		</section>
 	);
 }

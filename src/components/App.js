@@ -5,6 +5,7 @@ import Home from './Home';
 import SoloEntryForm from './SoloEntryForm';
 import JudgeForm from './JudgeForm';
 import Results from './Results';
+import SoloPage from './SoloPage';
 import './App.css';
 
 function App() {
@@ -20,6 +21,9 @@ function App() {
 				</Route>
 				<Route exact path="/results">
 					<Results />
+				</Route>
+				<Route path="/solopage">
+					<SoloPage />
 				</Route>
 				<Route exact path="/">
 					<Home />
