@@ -6,11 +6,12 @@ import About from './About';
 import SoloEntryForm from './SoloEntryForm';
 import JudgeForm from './JudgeForm';
 import Results from './Results';
+import SoloList from './SoloList';
 import './App.css';
 
 function App() {
 	return (
-		<div>
+		<div className="App">
 			<NavBar />
 			<Switch>
 				<Route path="/about">
