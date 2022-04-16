@@ -2,11 +2,9 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import NavBar from './NavBar';
 import Home from './Home';
-import About from './About';
 import SoloEntryForm from './SoloEntryForm';
 import JudgeForm from './JudgeForm';
 import Results from './Results';
-import SoloList from './SoloList';
 import './App.css';
 
 function App() {
@@ -14,17 +12,14 @@ function App() {
 		<div className="App">
 			<NavBar />
 			<Switch>
-				<Route path="/about">
-					<About />
-				</Route>
-				<Route exact path="/results">
-					<Results />
-				</Route>
 				<Route path="/entryform">
 					<SoloEntryForm />
 				</Route>
 				<Route path="/judgeform">
 					<JudgeForm />
+				</Route>
+				<Route exact path="/results">
+					<Results />
 				</Route>
 				<Route exact path="/">
 					<Home />

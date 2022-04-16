@@ -7,9 +7,8 @@ function NavBar() {
 			<NavLink exact to="/">
 				Home
 			</NavLink>
-			<NavLink to="/about">About</NavLink>
 			<NavLink to="/entryform">Solo Entry</NavLink>
-			<NavLink to="/judgeform">Judge's Forms</NavLink>
+			<NavLink to="/judgeform">Judge's Form</NavLink>
 			<NavLink to="/results">Results</NavLink>
 		</nav>
 	);

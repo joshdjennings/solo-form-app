@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Search from './Search';
-import SoloEntryForm from './SoloEntryForm';
+// import SoloEntryForm from './SoloEntryForm';
 import SoloList from './SoloList';
 
 function Results() {
@@ -21,35 +21,35 @@ function Results() {
 		return solos.filter((s) => s.name.includes(search.toLowerCase()));
 	};
 
-	const addNewSolo = (soloData) => {
-		const dataToSend = {
-			...soloData,
-			feedback: {
-				memory: soloData.memory,
-				tone: soloData.tone,
-				technique: soloData.technique,
-				musicianship: soloData.musicianship,
-				comments: soloData.comments,
-				rating: soloData.rating,
-				outstanding: soloData.ouststanding,
-				judge: soloData.judge,
-			},
-		};
-		// delete dataToSend.frontUrl;
-		// delete dataToSend.backUrl;
+	// const addNewSolo = (soloData) => {
+	// 	const dataToSend = {
+	// 		...soloData,
+	// 		feedback: {
+	// 			memory: soloData.memory,
+	// 			tone: soloData.tone,
+	// 			technique: soloData.technique,
+	// 			musicianship: soloData.musicianship,
+	// 			comments: soloData.comments,
+	// 			rating: soloData.rating,
+	// 			outstanding: soloData.ouststanding,
+	// 			judge: soloData.judge,
+	// 		},
+	// 	};
+	// 	// delete dataToSend.frontUrl;
+	// 	// delete dataToSend.backUrl;
 
-		const configObj = {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify(dataToSend),
-		};
+	// 	const configObj = {
+	// 		method: 'POST',
+	// 		headers: {
+	// 			'Content-Type': 'application/json',
+	// 		},
+	// 		body: JSON.stringify(dataToSend),
+	// 	};
 
-		fetch('http://localhost:3005/solo_information', configObj)
-			.then((r) => r.json())
-			.then((solos) => setSolos((mUV) => [...mUV, solos]));
-	};
+	// 	fetch('http://localhost:3005/solo_information', configObj)
+	// 		.then((r) => r.json())
+	// 		.then((solos) => setSolos((mUV) => [...mUV, solos]));
+	// };
 
 	return (
 		<section id="results">
@@ -58,7 +58,7 @@ function Results() {
 			<p>Here are the Results</p>
 
 			<div>
-				<SoloEntryForm addNewSolo={addNewSolo} />
+				{/* <SoloEntryForm addNewSolo={addNewSolo} /> */}
 				<br />
 				<Search search={search} handleSearch={handleSearch} />
 				<br />

@@ -1,16 +1,12 @@
-import React, { Card } from 'react';
-import SoloCard from './SoloCard';
+import React from 'react';
 
-function SoloList({ solos }) {
+function SoloList() {
 	return (
-		<div>
-			<h1>Hello From SoloList</h1>
-			<Card.Group itemsPerRow={6}>
-				{solos.map((s) => (
-					<SoloCard key={s.id} solos={s} />
-				))}
-			</Card.Group>
-		</div>
+		<section id="SoloList">
+			<h2>Solo List</h2>
+			<p>This is the List of solos</p>
+			<div></div>
+		</section>
 	);
 }
 
