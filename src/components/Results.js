@@ -54,15 +54,11 @@ function Results() {
 	return (
 		<section id="results">
 			<h1>Results</h1>
-			<br />
 			<p>Here are the Results</p>
 
 			<div>
 				{/* <SoloEntryForm addNewSolo={addNewSolo} /> */}
-				<br />
 				<Search search={search} handleSearch={handleSearch} />
-				<br />
-				<SoloList solos={displayedSolos()} />
 			</div>
 		</section>
 	);

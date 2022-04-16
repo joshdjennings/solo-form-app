@@ -1,14 +1,25 @@
 import React from 'react';
+import SoloList from './SoloList';
 
 function Home() {
 	return (
 		<section id="home">
-			<h1 style={{ color: 'firebrick' }}>This is the Homepage</h1>
+			<h1>This is the Homepage</h1>
 			<p>
 				Welcome to the Solo and Ensemble Homepage. Here you will need to decide
-				whether you are a <a href="http://localhost:3000/entryform">Soloist</a>{' '}
-				or a <a href="http://localhost:3000/judgeform">Judge</a>.
+				whether you are a{' '}
+				<a style={{ color: '#FCF15B' }} href="http://localhost:3000/entryform">
+					Soloist
+				</a>{' '}
+				or a{' '}
+				<a style={{ color: '#FCF15B' }} href="http://localhost:3000/judgeform">
+					Judge
+				</a>
+				.
 			</p>
+			<div>
+				<SoloList />
+			</div>
 		</section>
 	);
 }

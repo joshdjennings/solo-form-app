@@ -28,7 +28,7 @@ nav {
 	top: 0;
 	left: 0;
 	right: 0;
-	background-color: cornsilk;
+	background-color: #552eb0;
 }
 
 nav a {
@@ -36,75 +36,40 @@ nav a {
 	margin: 1rem 2rem;
 	text-decoration: none;
 	font-size: 1.2em;
-	color: firebrick;
-	border-bottom: 2px solid firebrick;
+	color: #b0a61c;
+	border-bottom: 2px solid #b0a61c;
 	transition: 0.1s;
 }
 
 nav a:hover,
 nav a:active {
-	color: tomato;
-	border-bottom: 2px solid tomato;
-}
-
-#home {
-	height: 50vh;
-	min-height: 400px;
-	background-color: cornsilk;
+	color: #fcf15b;
+	border-bottom: 2px solid #fcf15b;
 }
 
 #home,
-#about,
-#projects {
+#soloEntryForm,
+#judgeForm,
+#results {
+	height: 100vh;
+	min-height: 400px;
+	background-color: #8b5bfc;
+}
+
+#soloEntryForm {
+	height: 100vh;
+	min-height: 400px;
+	background-color: #8b5bfc;
+}
+
+#home,
+#soloEntryForm,
+#judgeForm,
+#results {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
 	text-align: center;
 	padding: 1rem;
-}
-
-#about img {
-	max-height: 50%;
-}
-
-#about a {
-	display: block;
-}
-
-#projects {
-	background-color: cornsilk;
-	min-height: 400px;
-}
-
-#project-list {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	width: 100%;
-	max-width: 800px;
-}
-
-.project-item {
-	background-color: white;
-	padding: 2rem;
-	margin: 1rem;
-}
-
-.technologies span {
-	background-color: lightblue;
-	margin: 0.25rem;
-	padding: 0.5rem;
-	border-radius: 4px;
-	display: inline-block;
-}
-
-@media (min-width: 700px) {
-	#project-list {
-		flex-direction: row;
-	}
-
-	.project-item {
-		width: 50%;
-	}
 }
