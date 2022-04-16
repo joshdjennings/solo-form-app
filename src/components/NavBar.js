@@ -10,7 +10,7 @@ function NavBar() {
 			<NavLink to="/entryform">Solo Entry</NavLink>
 			<NavLink to="/judgeform">Judge's Form</NavLink>
 			<NavLink to="/results">Results</NavLink>
-			{/* <NavLink to="/solopage">Solo Page</NavLink> */}
+			<NavLink to="/solopage">Solo Page</NavLink>
 		</nav>
 	);
 }

@@ -1,7 +1,7 @@
 import React, { Card } from 'react';
 import SoloCard from './SoloCard';
 
-function SoloCollection({ solo }) {
+function SoloCollection() {
 	return (
 		<div>
 			<h1>Hello From Solo Collection</h1>
