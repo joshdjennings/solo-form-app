@@ -51,21 +51,9 @@ nav a:active {
 #soloEntryForm,
 #judgeForm,
 #results {
-	height: 100vh;
+	height: 50vh;
 	min-height: 400px;
 	background-color: #8b5bfc;
-}
-
-#soloEntryForm {
-	height: 100vh;
-	min-height: 400px;
-	background-color: #8b5bfc;
-}
-
-#home,
-#soloEntryForm,
-#judgeForm,
-#results {
 	display: flex;
 	align-items: center;
 	justify-content: center;
