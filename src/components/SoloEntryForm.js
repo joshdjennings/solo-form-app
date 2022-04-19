@@ -1,12 +1,16 @@
 import React from 'react';
+import Search from './Search';
 
-function SoloEntryForm() {
+function SoloEntryForm({ solos, search, handleSearch }) {
 	return (
-		<section id="soloEntryForm">
-			<h2>Solo Entry Form</h2>
-			<p>Enter Solo Information Here</p>
-			<div></div>
-		</section>
+		<div>
+			<section id="soloEntryForm">
+				<h2>Solo Entry Form</h2>
+				<p>Enter Solo Information Here</p>
+
+				<Search />
+			</section>
+		</div>
 	);
 }
 

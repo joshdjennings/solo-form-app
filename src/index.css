@@ -49,10 +49,9 @@ nav a:active {
 
 #home,
 #soloEntryForm,
-#judgeForm,
 #results {
-	height: 50vh;
-	min-height: 400px;
+	height: 30vh;
+	min-height: 200px;
 	background-color: #8b5bfc;
 	display: flex;
 	align-items: center;
