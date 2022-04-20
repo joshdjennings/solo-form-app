@@ -11,18 +11,18 @@ function Results({ solos }) {
 				<h1>Results</h1>
 				<p>Enter Search Below</p>
 				<Search />
-			</section>
-			<table className="table table-striped">
-				<thead>
-					<tr>
-						<th scope="col">Name</th>
-						<th scope="col">Title</th>
-						<th scope="col">Instrument</th>
-					</tr>
-				</thead>
-				<tbody>{soloRows}</tbody>
-			</table>
 
+				<table className="table table-striped">
+					<thead>
+						<tr>
+							<th scope="col">Name</th>
+							<th scope="col">Title</th>
+							<th scope="col">Instrument</th>
+						</tr>
+					</thead>
+					<tbody>{soloRows}</tbody>
+				</table>
+			</section>
 			<select>
 				<option value="grapefruit">Grapefruit</option>
 				<option value="lime">Lime</option>

@@ -23,7 +23,23 @@ function App() {
 	const displayedSolos = () => {
 		return solos.filter((s) => s.name.includes(search.toLowerCase()));
 	};
+	const addNewSolo = (soloData) => {
+		const dataToSend = {
+			...soloData,
+		};
 
+		const configObj = {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(dataToSend),
+		};
+
+		fetch('http://localhost:3005/solo_information', configObj)
+			.then((r) => r.json())
+			.then((solos) => setSolos((mUV) => [...mUV, solos]));
+	};
 	return (
 		<div className="App">
 			<NavBar />
@@ -33,6 +49,7 @@ function App() {
 						solos={solos}
 						search={search}
 						handleSearch={handleSearch}
+						addNewSolo={addNewSolo}
 					/>
 				</Route>
 
@@ -49,8 +66,8 @@ function App() {
 				</Route>
 			</Switch>
 
-			<h1>More info</h1>
-			<p>Down Here is going to be more information</p>
+			<h3>More info</h3>
+			<p>This is a permanent section that shows up on all pages</p>
 		</div>
 	);
 }
