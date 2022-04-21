@@ -2,18 +2,18 @@ import React, { useState, Form } from 'react';
 import Search from './Search';
 
 function SoloEntryForm({ addNewSolo }) {
-	const defaultState = {
-		name: '',
-		title: '',
-		instrument: '',
-	};
+	// const defaultState = {
+	// 	name: '',
+	// 	title: '',
+	// 	instrument: '',
+	// };
 
-	const [formData, setFormData] = useState(defaultState);
+	// const [formData, setFormData] = useState(defaultState);
 
-	const handleChange = (e) => {
-		const thingWeChange = e.target.name;
-		setFormData(() => ({ ...formData, [thingWeChange]: e.target.value }));
-	};
+	// const handleChange = (e) => {
+	// 	const thingWeChange = e.target.name;
+	// 	setFormData(() => ({ ...formData, [thingWeChange]: e.target.value }));
+	// };
 
 	return (
 		<div>
@@ -21,10 +21,10 @@ function SoloEntryForm({ addNewSolo }) {
 				<h2>Solo Entry Form</h2>
 				<p>Enter Solo Information Here</p>
 
-				<Search />
-			</section>
-			<h3>Add a Solo!</h3>
-			{/* <Form
+				{/* <Search /> */}
+
+				<h3>Add a Solo!</h3>
+				{/* <Form
 				onSubmit={(e) => {
 					e.preventDefault();
 					console.log('submitting form...');
@@ -34,6 +34,7 @@ function SoloEntryForm({ addNewSolo }) {
 					addNewSolo(formData);
 				}}
 			>
+
 				<Form.Group widths="equal">
 					<Form.Input
 						fluid
@@ -62,6 +63,7 @@ function SoloEntryForm({ addNewSolo }) {
 				</Form.Group>
 				<Form.Button>Submit</Form.Button>
 			</Form> */}
+			</section>
 		</div>
 	);
 }

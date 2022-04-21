@@ -1,16 +1,16 @@
 import React from 'react';
-import Search from './Search';
-import Solo from './Solo';
+// import Search from './Search';
+// import Solo from './Solo';
 
-function Results({ solos }) {
-	const soloRows = solos.map((solo) => <Solo key={solo.id} solo={solo} />);
+function Results({ solo, soloRows }) {
+	// const soloRows = solos.map((solo) => <Solo key={solo.id} solo={solo} />);
 
 	return (
 		<div>
 			<section id="results">
 				<h1>Results</h1>
 				<p>Enter Search Below</p>
-				<Search />
+				{/* <Search /> */}
 
 				<table className="table table-striped">
 					<thead>
@@ -23,14 +23,14 @@ function Results({ solos }) {
 					<tbody>{soloRows}</tbody>
 				</table>
 			</section>
-			<select>
+			{/* <select>
 				<option value="grapefruit">Grapefruit</option>
 				<option value="lime">Lime</option>
 				<option selected value="coconut">
 					Coconut
 				</option>
 				<option value="mango">Mango</option>
-			</select>
+			</select> */}
 		</div>
 	);
 }

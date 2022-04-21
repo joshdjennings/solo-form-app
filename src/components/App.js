@@ -5,56 +5,62 @@ import Home from './Home';
 import SoloEntryForm from './SoloEntryForm';
 import Results from './Results';
 import './App.css';
+import SoloList from './SoloList';
 
 function App() {
 	const [solos, setSolos] = useState([]);
-	const [search, setSearch] = useState('');
+	// const [search, setSearch] = useState('');
 
 	useEffect(() => {
 		fetch('http://localhost:3005/solo_information')
 			.then((res) => res.json())
-			.then((solos) => setSolos(solos));
+			.then((data) => setSolos(data));
 	}, []);
 
-	function handleSearch(event) {
-		return setSearch(event.target.value);
-	}
+	// function handleSearch(event) {
+	// 	return setSearch(event.target.value);
+	// }
 
-	const displayedSolos = () => {
-		return solos.filter((s) => s.name.includes(search.toLowerCase()));
-	};
-	const addNewSolo = (soloData) => {
-		const dataToSend = {
-			...soloData,
-		};
+	// const displayedSolos = () => {
+	// 	return solos.filter((s) => s.name.includes(search.toLowerCase()));
+	// };
+	// const addNewSolo = (soloData) => {
+	// 	const dataToSend = {
+	// 		...soloData,
+	// 	};
 
-		const configObj = {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify(dataToSend),
-		};
+	// 	const configObj = {
+	// 		method: 'POST',
+	// 		headers: {
+	// 			'Content-Type': 'application/json',
+	// 		},
+	// 		body: JSON.stringify(dataToSend),
+	// 	};
 
-		fetch('http://localhost:3005/solo_information', configObj)
-			.then((r) => r.json())
-			.then((solos) => setSolos((mUV) => [...mUV, solos]));
-	};
+	// 	fetch('http://localhost:3005/solo_information', configObj)
+	// 		.then((r) => r.json())
+	// 		.then((solos) => setSolos((mUV) => [...mUV, solos]));
+	// };
 	return (
 		<div className="App">
 			<NavBar />
+			<SoloList solos={solos} />
 			<Switch>
 				<Route path="/entryform">
 					<SoloEntryForm
-						solos={solos}
-						search={search}
-						handleSearch={handleSearch}
-						addNewSolo={addNewSolo}
+					// solos={solos}
+					// search={search}
+					// handleSearch={handleSearch}
+					// addNewSolo={addNewSolo}
 					/>
 				</Route>
 
 				<Route exact path="/results">
-					<Results solos={solos} search={search} handleSearch={handleSearch} />
+					<Results
+						solos={solos}
+						// search={search}
+						// handleSearch={handleSearch}
+					/>
 				</Route>
 
 				<Route exact path="/">
