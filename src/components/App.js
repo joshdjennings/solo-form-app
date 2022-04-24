@@ -44,17 +44,18 @@ function App() {
 	return (
 		<div className="App">
 			<NavBar />
-			<SoloList solos={solos} />
 			<Switch>
 				<Route path="/entryform">
 					<SoloEntryForm
-					// solos={solos}
-					// search={search}
-					// handleSearch={handleSearch}
-					// addNewSolo={addNewSolo}
+						solos={solos}
+						// search={search}
+						// handleSearch={handleSearch}
+						// addNewSolo={addNewSolo}
 					/>
 				</Route>
-
+				<Route path="/sololist">
+					<SoloList solos={solos} />
+				</Route>
 				<Route exact path="/results">
 					<Results
 						solos={solos}

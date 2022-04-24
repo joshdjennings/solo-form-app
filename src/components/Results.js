@@ -1,9 +1,9 @@
 import React from 'react';
 // import Search from './Search';
-// import Solo from './Solo';
+import Solo from './Solo';
 
-function Results({ solo, soloRows }) {
-	// const soloRows = solos.map((solo) => <Solo key={solo.id} solo={solo} />);
+function Results({ solos }) {
+	const soloRows = solos.map((solo) => <Solo solo={solo} />);
 
 	return (
 		<div>
@@ -12,7 +12,7 @@ function Results({ solo, soloRows }) {
 				<p>Enter Search Below</p>
 				{/* <Search /> */}
 
-				<table className="table table-striped">
+				<table className="table table-striped table-dark">
 					<thead>
 						<tr>
 							<th scope="col">Name</th>

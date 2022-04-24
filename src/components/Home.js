@@ -13,8 +13,8 @@ function Home() {
 						href="http://localhost:3000/entryform"
 					>
 						Soloist
-					</a>{' '}
-					.
+					</a>
+					{''}.
 				</p>
 			</section>
 		</div>

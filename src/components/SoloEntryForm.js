@@ -1,5 +1,5 @@
-import React, { useState, Form } from 'react';
-import Search from './Search';
+import React from 'react';
+// import Search from './Search';
 
 function SoloEntryForm({ addNewSolo }) {
 	// const defaultState = {
