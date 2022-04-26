@@ -1,5 +1,5 @@
 {
-	"solo_information": [
+	"solos": [
 		{
 			"id": 1,
 			"name": "Clair Omar Musser",
@@ -18,7 +18,7 @@
 			"id": 3,
 			"name": "Giovanni Hidalgo",
 			"title": "Conga Madness",
-			"instrument": "Congas",
+			"instrument": "Other",
 			"img": "some url"
 		}
 	]
