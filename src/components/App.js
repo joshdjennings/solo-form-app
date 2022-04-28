@@ -9,7 +9,7 @@ import SoloList from './SoloList';
 
 function App() {
 	const [solos, setSolos] = useState([]);
-	const [search, setSearch] = useState('');
+	// const [search, setSearch] = useState('');
 
 	useEffect(() => {
 		fetch('http://localhost:3005/solos')
@@ -17,30 +17,30 @@ function App() {
 			.then((data) => setSolos(data));
 	}, []);
 
-	function handleSearch(event) {
-		return setSearch(event.target.value);
-	}
+	// function handleSearch(event) {
+	// 	return setSearch(event.target.value);
+	// }
 
-	const displayedSolos = () => {
-		return solos.filter((s) => s.name.includes(search.toLowerCase()));
-	};
-	const addNewSolo = (soloData) => {
-		const dataToSend = {
-			...soloData,
-		};
+	// const displayedSolos = () => {
+	// 	return solos.filter((s) => s.name.includes(search.toLowerCase()));
+	// };
+	// const addNewSolo = (soloData) => {
+	// 	const dataToSend = {
+	// 		...soloData,
+	// 	};
 
-		const configObj = {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify(dataToSend),
-		};
+	// 	const configObj = {
+	// 		method: 'POST',
+	// 		headers: {
+	// 			'Content-Type': 'application/json',
+	// 		},
+	// 		body: JSON.stringify(dataToSend),
+	// 	};
 
-		fetch('http://localhost:3005/solos', configObj)
-			.then((r) => r.json())
-			.then((solos) => setSolos((mUV) => [...mUV, solos]));
-	};
+	// 	fetch('http://localhost:3005/solos', configObj)
+	// 		.then((r) => r.json())
+	// 		.then((solos) => setSolos((mUV) => [...mUV, solos]));
+	// };
 	return (
 		<div className="App">
 			<NavBar />
@@ -50,7 +50,7 @@ function App() {
 						solos={solos}
 						// search={search}
 						// handleSearch={handleSearch}
-						addNewSolo={addNewSolo}
+						// addNewSolo={addNewSolo}
 					/>
 				</Route>
 				<Route path="/sololist">

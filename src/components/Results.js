@@ -10,6 +10,13 @@ function Results({ solos }) {
 			<section id="results">
 				<h1>Results</h1>
 				<p>Enter Search Below</p>
+				<select>
+					<option value="name">Name</option>
+					<option value="title">Title</option>
+					<option selected value="instrument">
+						Instrument
+					</option>
+				</select>
 				{/* <Search /> */}
 
 				<table className="table table-striped table-dark">
@@ -23,14 +30,6 @@ function Results({ solos }) {
 					<tbody>{soloRows}</tbody>
 				</table>
 			</section>
-			{/* <select>
-				<option value="grapefruit">Grapefruit</option>
-				<option value="lime">Lime</option>
-				<option selected value="coconut">
-					Coconut
-				</option>
-				<option value="mango">Mango</option>
-			</select> */}
 		</div>
 	);
 }
