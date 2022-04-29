@@ -9,7 +9,7 @@ import SoloList from './SoloList';
 
 function App() {
 	const [solos, setSolos] = useState([]);
-	// const [search, setSearch] = useState('');
+	const [search, setSearch] = useState('');
 
 	useEffect(() => {
 		fetch('http://localhost:3005/solos')
@@ -17,13 +17,13 @@ function App() {
 			.then((data) => setSolos(data));
 	}, []);
 
-	// function handleSearch(event) {
-	// 	return setSearch(event.target.value);
-	// }
+	function handleSearch(event) {
+		return setSearch(event.target.value);
+	}
 
-	// const displayedSolos = () => {
-	// 	return solos.filter((s) => s.name.includes(search.toLowerCase()));
-	// };
+	const displayedSolos = () => {
+		return solos.filter((s) => s.name.includes(search.toLowerCase()));
+	};
 	// const addNewSolo = (soloData) => {
 	// 	const dataToSend = {
 	// 		...soloData,
@@ -48,20 +48,14 @@ function App() {
 				<Route path="/entryform">
 					<SoloEntryForm
 						solos={solos}
-						// search={search}
-						// handleSearch={handleSearch}
 						// addNewSolo={addNewSolo}
 					/>
 				</Route>
 				<Route path="/sololist">
-					<SoloList solos={solos} />
+					<SoloList solos={solos} search={search} handleSearch={handleSearch} />
 				</Route>
 				<Route exact path="/results">
-					<Results
-						solos={solos}
-						// search={search}
-						// handleSearch={handleSearch}
-					/>
+					<Results solos={solos} search={search} handleSearch={handleSearch} />
 				</Route>
 
 				<Route exact path="/">
