@@ -3,7 +3,7 @@ import React from 'react';
 import Solo from './Solo';
 
 function Results({ solos }) {
-	const soloRows = solos.map((solo) => <Solo solo={solo} />);
+	const soloRows = solos.map((solo) => <Solo key={solo.id} solo={solo} />);
 
 	return (
 		<div>
@@ -13,9 +13,7 @@ function Results({ solos }) {
 				<select>
 					<option value="name">Name</option>
 					<option value="title">Title</option>
-					<option selected value="instrument">
-						Instrument
-					</option>
+					<option defaultValue="instrument">Instrument</option>
 				</select>
 				{/* <Search /> */}
 
