@@ -67,8 +67,8 @@ function App() {
 				</Route>
 			</Switch>
 
-			<h3>More info</h3>
-			<p>This is a permanent section that shows up on all pages</p>
+			<h3>This is Located at the bottom of App.js</h3>
+			<p>This a Footer on all pages</p>
 		</div>
 	);
 }

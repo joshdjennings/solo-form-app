@@ -8,6 +8,7 @@ function Results({ solos }) {
 	return (
 		<div>
 			<section id="results">
+				<br />
 				<h1>Results</h1>
 				<p>Enter Search Below</p>
 				<select>

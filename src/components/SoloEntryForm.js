@@ -1,22 +1,74 @@
 import React, { useState } from 'react';
+import { Form } from 'semantic-ui-react';
 
-function SoloEntryForm({ solos }) {
-	const [query, setQuery] = useState('');
+function SoloEntryForm({ solos, addNewSolo }) {
+	const defaultState = {
+		name: '',
+		title: '',
+		instrument: '',
+	};
 
-	const onChange = (event) => setQuery(event.target.value);
-	const filteredSolos = solos.filter((name) => {
-		console.log(name);
-	});
+	const [formData, setFormData] = useState(defaultState);
+
+	const handleChange = (e) => {
+		const thingWeChange = e.target.name;
+		setFormData(() => ({ ...formData, [thingWeChange]: e.target.value }));
+	};
+	// const [query, setQuery] = useState('');
+
+	// const onChange = (event) => setQuery(event.target.value);
+	// const filteredSolos = solos.filter((name) => {
+	// 	console.log(name);
+	// });
 
 	return (
 		<div>
-			<h2>Solo List</h2>
-			<input type="text" value={query} onChange={onChange} />
-			<div className="list">
-				{filteredSolos.map((name) => (
-					<div>{name}</div>
-				))}
-			</div>
+			<section id="entryForm">
+				<h2>This is the Entry Form</h2>
+
+				<Form
+					onSubmit={(e) => {
+						e.preventDefault();
+						console.log('submitting form...');
+
+						// reset the form
+						setFormData(defaultState);
+						addNewSolo(formData);
+					}}
+				>
+					<Form.Group widths="equal">
+						<Form.Input
+							fluid
+							label="Name"
+							value={formData.name}
+							onChange={handleChange}
+							placeholder="Name"
+							name="name"
+						/>
+						<Form.Input
+							fluid
+							label="Title"
+							value={formData.title}
+							onChange={handleChange}
+							placeholder="Title"
+							name="title"
+						/>
+						<Form.Input
+							fluid
+							label="Instrument"
+							value={formData.instrument}
+							onChange={handleChange}
+							placeholder="Instrument"
+							name="instrument"
+						/>
+					</Form.Group>
+					<Form.Button>Submit</Form.Button>
+				</Form>
+				{/* <input type="text" value={query} onChange={onChange} />
+			{filteredSolos.map((name) => (
+				<div>{name}</div>
+			))} */}
+			</section>
 		</div>
 	);
 }
