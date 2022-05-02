@@ -8,11 +8,6 @@ function Solo({ solo }) {
 			<td>{name}</td>
 			<td>{title}</td>
 			<td>{instrument}</td>
-			<td>
-				<button type="button" className="btn btn-primary">
-					Edit Solo
-				</button>
-			</td>
 		</tr>
 	);
 }

@@ -13,7 +13,7 @@ body {
 	padding-bottom: 2.5rem;
 	width: 75%;
 	margin: 0 auto;
-  }
+}
 
 h1,
 h2,
@@ -43,21 +43,21 @@ nav a {
 	text-decoration: none;
 	font-size: 1.2em;
 	color: #b0a61c;
-	border-bottom: 2px solid #b0a61c;
-	transition: 0.1s;
+	transition: 0.5s;
 }
 
 nav a:hover,
 nav a:active {
 	color: #fcf15b;
-	border-bottom: 2px solid #fcf15b;
+	/* border-bottom: 2px solid #fcf15b; */
 }
 
 #home,
-#soloEntryForm,
+#soloList,
+#entryForm,
 #results {
 	height: 30vh;
-	min-height: 500px;
+	min-height: 600px;
 	background-color: #8b5bfc;
 	display: flex;
 	align-items: center;

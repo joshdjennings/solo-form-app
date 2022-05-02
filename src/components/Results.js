@@ -1,29 +1,29 @@
 import React from 'react';
-// import Search from './Search';
-import Solo from './Solo';
+import Search from './Search';
+import Ratings from './Ratings';
 
 function Results({ solos }) {
-	const soloRows = solos.map((solo) => <Solo key={solo.id} solo={solo} />);
+	const soloRows = solos.map((solo) => <Ratings key={solo.id} solo={solo} />);
 
 	return (
 		<div>
 			<section id="results">
 				<br />
+				<br />
 				<h1>Results</h1>
+
 				<p>Enter Search Below</p>
-				<select>
-					<option value="name">Name</option>
-					<option value="title">Title</option>
-					<option defaultValue="instrument">Instrument</option>
-				</select>
-				{/* <Search /> */}
+				<Search />
+				<button type="button" className="btn btn-primary">
+					Search
+				</button>
 
 				<table className="table table-striped table-dark">
 					<thead>
 						<tr>
 							<th scope="col">Name</th>
 							<th scope="col">Title</th>
-							<th scope="col">Instrument</th>
+							<th scope="col">Rating</th>
 						</tr>
 					</thead>
 					<tbody>{soloRows}</tbody>

@@ -4,8 +4,8 @@ import NavBar from './NavBar';
 import Home from './Home';
 import SoloEntryForm from './SoloEntryForm';
 import Results from './Results';
-import './App.css';
 import SoloList from './SoloList';
+import './App.css';
 
 function App() {
 	const [solos, setSolos] = useState([]);
@@ -17,13 +17,13 @@ function App() {
 			.then((data) => setSolos(data));
 	}, []);
 
-	function handleSearch(event) {
-		return setSearch(event.target.value);
-	}
+	// function handleSearch(event) {
+	// 	return setSearch(event.target.value);
+	// }
 
-	const displayedSolos = () => {
-		return solos.filter((s) => s.name.includes(search.toLowerCase()));
-	};
+	// const displayedSolos = () => {
+	// 	return solos.filter((s) => s.name.includes(search.toLowerCase()));
+	// };
 	// const addNewSolo = (soloData) => {
 	// 	const dataToSend = {
 	// 		...soloData,
@@ -52,10 +52,19 @@ function App() {
 					/>
 				</Route>
 				<Route path="/sololist">
-					<SoloList solos={solos} search={search} handleSearch={handleSearch} />
+					<SoloList
+						solos={solos}
+						// search={search}
+						// handleSearch={handleSearch}
+					/>
 				</Route>
 				<Route exact path="/results">
-					<Results solos={solos} search={search} handleSearch={handleSearch} />
+					<Results
+						solos={solos}
+						// search={search}
+						// handleSearch={handleSearch}
+						// displayedSolos={displayedSolos}
+					/>
 				</Route>
 
 				<Route exact path="/">

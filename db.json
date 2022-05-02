@@ -5,21 +5,21 @@
 			"name": "Clair Omar Musser",
 			"title": "Op 6 No 9",
 			"instrument": "Marimba",
-			"img": "some url"
+			"rating": "1"
 		},
 		{
 			"id": 2,
 			"name": "John S. Pratt",
 			"title": "Drum Corps on the March",
 			"instrument": "Snare Drum",
-			"img": "some url"
+			"rating": "1"
 		},
 		{
 			"id": 3,
 			"name": "Giovanni Hidalgo",
 			"title": "Conga Madness",
 			"instrument": "Other",
-			"img": "some url"
+			"rating": "1"
 		}
 	]
 }
