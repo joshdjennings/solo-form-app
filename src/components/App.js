@@ -42,7 +42,15 @@ function App() {
 	// 		.then((solos) => setSolos((mUV) => [...mUV, solos]));
 	// };
 	return (
-		<div className="App">
+		<div
+			className="App"
+			style={{
+				backgroundImage: 'url(/Vibraphone.png)',
+				backgroundRepeat: 'repeat',
+				height: '100vh',
+				backgroundSize: 'cover',
+			}}
+		>
 			<NavBar />
 			<Switch>
 				<Route path="/entryform">

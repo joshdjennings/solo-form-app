@@ -56,8 +56,8 @@ nav a:active {
 #soloList,
 #entryForm,
 #results {
-	height: 30vh;
-	min-height: 600px;
+	height: 50vh;
+	/* min-height: 100px; */
 	background-color: #8b5bfc;
 	display: flex;
 	align-items: center;

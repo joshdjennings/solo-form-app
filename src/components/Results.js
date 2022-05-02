@@ -8,10 +8,7 @@ function Results({ solos }) {
 	return (
 		<div>
 			<section id="results">
-				<br />
-				<br />
 				<h1>Results</h1>
-
 				<p>Enter Search Below</p>
 				<Search />
 				<button type="button" className="btn btn-primary">
