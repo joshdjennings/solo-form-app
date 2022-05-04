@@ -9,7 +9,7 @@ function Results({ solos }) {
 		<div>
 			<section id="results">
 				<h1>Results</h1>
-				<p>Enter Search Below</p>
+				<p>Search by Name</p>
 				<Search />
 				<button type="button" className="btn btn-primary">
 					Search

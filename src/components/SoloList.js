@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import Solo from './Solo';
+import SoloCollection from './SoloCollection';
 
 function SoloList({ solos }) {
-	const soloRows = solos.map((solo) => <Solo key={solo.id} solo={solo} />);
+	// const soloRows = solos.map((solo) => <Solo key={solo.id} solo={solo} />);
 
 	return (
 		<div>
 			<section id="soloList">
 				<h2>List of Entries</h2>
-				<table className="table table-striped table-dark">
+				{/* <table className="table table-striped table-dark">
 					<thead>
 						<tr>
 							<th scope="col">Name</th>
@@ -17,7 +18,8 @@ function SoloList({ solos }) {
 						</tr>
 					</thead>
 					<tbody>{soloRows}</tbody>
-				</table>
+				</table> */}
+				<SoloCollection solos={solos} />
 			</section>
 		</div>
 	);

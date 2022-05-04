@@ -5,6 +5,7 @@ import Home from './Home';
 import SoloEntryForm from './SoloEntryForm';
 import Results from './Results';
 import SoloList from './SoloList';
+import Search from './Search';
 import './App.css';
 
 function App() {
@@ -17,13 +18,16 @@ function App() {
 			.then((data) => setSolos(data));
 	}, []);
 
-	// function handleSearch(event) {
-	// 	return setSearch(event.target.value);
-	// }
+	function handleSearch(event) {
+		return setSearch(event.target.value);
+	}
 
-	// const displayedSolos = () => {
-	// 	return solos.filter((s) => s.name.includes(search.toLowerCase()));
-	// };
+	const displayedSolos = () => {
+		if (search === '') {
+			return solos;
+		}
+		// return solos.filter((s) => s.name.includes(search.toLowerCase()));
+	};
 	// const addNewSolo = (soloData) => {
 	// 	const dataToSend = {
 	// 		...soloData,
@@ -61,16 +65,16 @@ function App() {
 				</Route>
 				<Route path="/sololist">
 					<SoloList
-						solos={solos}
-						// search={search}
-						// handleSearch={handleSearch}
+						solos={displayedSolos()}
+						search={search}
+						handleSearch={handleSearch}
 					/>
 				</Route>
-				<Route exact path="/results">
+				<Route path="/results">
 					<Results
 						solos={solos}
-						// search={search}
-						// handleSearch={handleSearch}
+						search={search}
+						handleSearch={handleSearch}
 						// displayedSolos={displayedSolos}
 					/>
 				</Route>

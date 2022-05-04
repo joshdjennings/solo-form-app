@@ -1,8 +1,6 @@
 import React from 'react';
 
-function Solo({ solo }) {
-	const { name, title, instrument } = solo;
-
+function Solo({ solo: { name, title, instrument } }) {
 	return (
 		<tr>
 			<td>{name}</td>
