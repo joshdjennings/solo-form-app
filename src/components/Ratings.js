@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Ratings({ solo: { name, title, rating } }) {
+function Ratings({ solo: { id, name, title, rating } }) {
 	return (
 		<tr>
 			<td>{name}</td>

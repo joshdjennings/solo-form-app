@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import Solo from './Solo';
+import React from 'react';
 import SoloCollection from './SoloCollection';
 
 function SoloList({ solos }) {

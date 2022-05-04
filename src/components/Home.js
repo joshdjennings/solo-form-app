@@ -3,20 +3,16 @@ import React from 'react';
 function Home() {
 	return (
 		<div id="home">
-			<section>
-				<h1>This is the Homepage</h1>
-				<p>
-					Welcome to the Solo and Ensemble Homepage. Here you find your solo
-					entry information. click here if you are a{' '}
-					<a
-						style={{ color: '#FCF15B' }}
-						href="http://localhost:3000/entryform"
-					>
-						Soloist
-					</a>
-					{''}.
-				</p>
-			</section>
+			<h1>Welcome to the Percussion Solo Homepage</h1>
+			<h4>
+				Here you find your solo entry information. Use the Navigation links
+				above to:
+			</h4>
+			<p>
+				<ul>Look at all the solo entries</ul>
+				<ul>Enter your solo information to be added to the list</ul>
+				<ul>Look up and search the results of the contest</ul>
+			</p>
 		</div>
 	);
 }

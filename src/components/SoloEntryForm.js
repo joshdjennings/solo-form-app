@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Form } from 'semantic-ui-react';
 
-function SoloEntryForm({ addNewSolo }) {
+function SoloEntryForm({ setSolos }) {
 	const defaultState = {
 		name: '',
 		title: '',
@@ -13,6 +13,24 @@ function SoloEntryForm({ addNewSolo }) {
 	const handleChange = (e) => {
 		const thingWeChange = e.target.name;
 		setFormData(() => ({ ...formData, [thingWeChange]: e.target.value }));
+	};
+
+	const addNewSolo = (formData) => {
+		const dataToSend = {
+			...formData,
+		};
+
+		const configObj = {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(dataToSend),
+		};
+
+		fetch('http://localhost:3005/solos', configObj)
+			.then((r) => r.json())
+			.then((solos) => setSolos((mUV) => [...mUV, solos]));
 	};
 
 	return (

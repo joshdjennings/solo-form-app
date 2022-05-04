@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Card } from 'semantic-ui-react';
 
-function SoloCard({ solos: { name, title, instrument } }) {
+function SoloCard({ solos: { id, name, title, instrument } }) {
 	return (
 		<Card>
 			<div>
@@ -10,6 +10,7 @@ function SoloCard({ solos: { name, title, instrument } }) {
 					<div className="title">{title}</div>
 					<div className="instrument">{instrument}</div>
 				</div>
+				<button>delete</button>
 			</div>
 		</Card>
 	);

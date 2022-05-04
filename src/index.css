@@ -1,3 +1,6 @@
+.App {
+	text-align: center;
+}
 * {
 	margin: 0;
 	padding: 0;
@@ -7,6 +10,7 @@
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
+	color: aliceblue;
 }
 
 .form-row {
@@ -23,10 +27,12 @@ h5,
 h6 {
 	font-family: 'Playfair Display', serif;
 	margin-bottom: 1em;
+	color: aquamarine;
 }
 
 p {
 	margin-bottom: 1em;
+	color: aquamarine;
 }
 
 nav {
@@ -58,7 +64,7 @@ nav a:active {
 #results {
 	height: 80vh;
 	/* min-height: 100px; */
-	background-color: #8b5bfc;
+	/* background-color: #8b5bfc; */
 	display: flex;
 	align-items: center;
 	justify-content: center;
