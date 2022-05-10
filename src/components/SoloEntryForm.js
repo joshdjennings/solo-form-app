@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Form } from 'semantic-ui-react';
 
-function SoloEntryForm({ setSolos }) {
+function SoloEntryForm({ solos, setSolos }) {
 	const defaultState = {
 		name: '',
 		title: '',
