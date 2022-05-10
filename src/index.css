@@ -13,11 +13,11 @@ body {
 	color: aliceblue;
 }
 
-/* .form-row {
+.form-row {
 	padding-bottom: 2.5rem;
 	width: 75%;
 	margin: 0 auto;
-} */
+}
 
 h1,
 h2,
@@ -58,8 +58,9 @@ nav a:active {
 	color: #fcf15b;
 }
 
-#soloList,
-#entryForm {
+/* #soloList, */
+#entryForm,
+#results {
 	height: 70vh;
 	min-height: 100px;
 	background-color: #8b5bfc;
@@ -70,8 +71,7 @@ nav a:active {
 	padding: 1rem;
 }
 
-#home,
-#results {
+#home {
 	height: 50vh;
 	min-height: 200px;
 	background-color: #8b5bfc;
