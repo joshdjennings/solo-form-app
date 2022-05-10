@@ -30,7 +30,8 @@ h6 {
 	color: aquamarine;
 }
 
-p {
+p,
+ul {
 	margin-bottom: 1em;
 	color: aquamarine;
 }
@@ -55,16 +56,25 @@ nav a {
 nav a:hover,
 nav a:active {
 	color: #fcf15b;
-	/* border-bottom: 2px solid #fcf15b; */
+}
+
+#soloList,
+#entryForm {
+	height: 70vh;
+	min-height: 100px;
+	background-color: #8b5bfc;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	padding: 1rem;
 }
 
 #home,
-#soloList,
-#entryForm,
 #results {
-	height: 80vh;
-	/* min-height: 100px; */
-	/* background-color: #8b5bfc; */
+	height: 50vh;
+	min-height: 200px;
+	background-color: #8b5bfc;
 	display: flex;
 	align-items: center;
 	justify-content: center;

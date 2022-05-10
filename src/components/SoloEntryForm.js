@@ -30,7 +30,7 @@ function SoloEntryForm({ setSolos }) {
 
 		fetch('http://localhost:3005/solos', configObj)
 			.then((r) => r.json())
-			.then((solos) => setSolos((mUV) => [...mUV, solos]));
+			.then((newSolo) => setSolos((mUV) => [...mUV, newSolo]));
 	};
 
 	return (
@@ -41,7 +41,6 @@ function SoloEntryForm({ setSolos }) {
 				<Form
 					onSubmit={(e) => {
 						e.preventDefault();
-						console.log('submitting form...');
 
 						// reset the form
 						setFormData(defaultState);
@@ -73,6 +72,14 @@ function SoloEntryForm({ setSolos }) {
 							placeholder="Instrument"
 							name="instrument"
 						/>
+						<Form.Input
+							fluid
+							label="Image"
+							value={formData.inst_pic}
+							onChange={handleChange}
+							placeholder="Image"
+							name="inst_pic"
+						/>
 					</Form.Group>
 					<Form.Button>Submit</Form.Button>
 				</Form>
@@ -80,72 +87,5 @@ function SoloEntryForm({ setSolos }) {
 		</div>
 	);
 }
-
-// function handleSubmit(event) {
-// 	event.preventDefault();
-// 	fetch(`http://localhost:3005/solos/${solo.id}`, {
-// 		method: 'PATCH',
-// 		headers: {
-// 			'Content-Type': 'application/json',
-// 		},
-// 		body: JSON.stringify(solo),
-// 	}).then((r) => r.json());
-// 	// .then(onEditSolo);
-// }
-
-// if (!solo) return null;
-
-// const { name, title, instrument } = solo;
-
-// return (
-// 	<div>
-// 		<form
-// 		// onSubmit={handleSubmit}
-// 		>
-// 			<div className="form-row">
-// 				<div className="col-5">
-// 					<input
-// 						type="text"
-// 						className="form-control"
-// 						placeholder="Student Name"
-// 						name="name"
-// 						value={name}
-// 						onChange={handleInputChange}
-// 					/>
-// 				</div>
-// 				<div className="col-5">
-// 					<input
-// 						type="text"
-// 						className="form-control"
-// 						placeholder="Solo Title"
-// 						name="title"
-// 						value={title}
-// 						onChange={handleInputChange}
-// 					/>
-// 				</div>
-// 				<div className="col">
-// 					<select
-// 						name="instrument"
-// 						value={instrument}
-// 						onChange={handleInputChange}
-// 						className="form-control"
-// 					>
-// 						<option value="Marimba">Marimba</option>
-// 						<option value="Vibraphone">Vibraphone</option>
-// 						<option value="Snare Drum">Snare Drum</option>
-// 						<option value="Other">Other</option>
-// 					</select>
-// 				</div>
-
-// 				<div className="col">
-// 					<button type="submit" className="btn btn-success">
-// 						Submit
-// 					</button>
-// 				</div>
-// 			</div>
-// 		</form>
-// 	</div>
-// 	);
-// }
 
 export default SoloEntryForm;

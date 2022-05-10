@@ -8,7 +8,8 @@ import SoloList from './SoloList';
 
 function App() {
 	const [solos, setSolos] = useState([]);
-	const [search, setSearch] = useState('');
+	// const [search, setSearch] = useState('');
+	// const [sortValue, setSortValue] = useState('none');
 
 	useEffect(() => {
 		fetch('http://localhost:3005/solos')
@@ -16,23 +17,22 @@ function App() {
 			.then((data) => setSolos(data));
 	}, []);
 
-	function handleSearch(event) {
-		return setSearch(event.target.value);
-	}
-
-	const displayedSolos = () => {
-		if (search === '') {
-			return solos;
-		}
-		// return solos.filter((s) => s.name.includes(search.toLowerCase()));
-	};
+	// const displayedSolos = () => {
+	// 	if (search === '' && sortValue === 'none') {
+	// 		return solos;
+	// 	}
+	// 	// first need to filter
+	// 	const filteredsolos = solos.filter((s) =>
+	// 		s.name.includes(search.toLowerCase())
+	// 	);
+	// };
 
 	return (
 		<div
 			className="App"
 			style={{
 				backgroundImage: 'url(/Drums.png)',
-				backgroundRepeat: 'no-repeat',
+				// backgroundRepeat: 'repeat',
 				height: '100vh',
 				backgroundSize: 'cover',
 			}}
@@ -40,27 +40,24 @@ function App() {
 			<NavBar />
 			<Switch>
 				<Route path="/entryform">
-					<SoloEntryForm solos={solos} setSolos={setSolos} />
+					<SoloEntryForm setSolos={setSolos} />
 				</Route>
 				<Route path="/sololist">
-					<SoloList solos={displayedSolos()} />
+					<SoloList solos={solos} />
 				</Route>
 				<Route path="/results">
-					<Results solos={solos} search={search} handleSearch={handleSearch} />
+					<Results
+						solos={solos}
+						// search={search}
+					/>
 				</Route>
-
 				<Route exact path="/">
 					<Home />
 				</Route>
-
 				<Route path="*">
 					<h1>404 not found</h1>
 				</Route>
 			</Switch>
-			<section id="footer">
-				<h3>This is Located at the bottom of App.js</h3>
-				<p>This a Footer on all pages</p>
-			</section>
 		</div>
 	);
 }

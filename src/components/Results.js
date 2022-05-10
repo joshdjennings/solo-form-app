@@ -10,7 +10,7 @@ function Results({ solos }) {
 			<section id="results">
 				<h1>Results</h1>
 				<p>Search by Name</p>
-				<Search />
+				<Search solos={solos} />
 				<button type="button" className="btn btn-primary">
 					Search
 				</button>
