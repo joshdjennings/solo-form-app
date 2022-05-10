@@ -8,7 +8,8 @@ function SoloList({ solos }) {
 			<br />
 			<br />
 			<br />
-			<section id="sololist">
+			<section id="soloList">
+				<h1>List of Solo Entries</h1>
 				<Card>
 					{solos.map((s) => (
 						<SoloCard key={s.id} solos={s} />

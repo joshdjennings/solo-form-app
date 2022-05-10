@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Form } from 'semantic-ui-react';
 
-function SoloEntryForm({ solos, setSolos }) {
+function SoloEntryForm({ setSolos }) {
 	const defaultState = {
 		name: '',
 		title: '',
 		instrument: '',
+		rating: '?',
+		inst_pic: '',
 	};
 
 	const [formData, setFormData] = useState(defaultState);
@@ -77,7 +79,7 @@ function SoloEntryForm({ solos, setSolos }) {
 							label="Image"
 							value={formData.inst_pic}
 							onChange={handleChange}
-							placeholder="Image"
+							placeholder="Image url"
 							name="inst_pic"
 						/>
 					</Form.Group>

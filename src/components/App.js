@@ -8,24 +8,12 @@ import SoloList from './SoloList';
 
 function App() {
 	const [solos, setSolos] = useState([]);
-	// const [search, setSearch] = useState('');
-	// const [sortValue, setSortValue] = useState('none');
 
 	useEffect(() => {
 		fetch('http://localhost:3005/solos')
 			.then((res) => res.json())
 			.then((data) => setSolos(data));
 	}, []);
-
-	// const displayedSolos = () => {
-	// 	if (search === '' && sortValue === 'none') {
-	// 		return solos;
-	// 	}
-	// 	// first need to filter
-	// 	const filteredsolos = solos.filter((s) =>
-	// 		s.name.includes(search.toLowerCase())
-	// 	);
-	// };
 
 	return (
 		<div
@@ -46,10 +34,7 @@ function App() {
 					<SoloList solos={solos} />
 				</Route>
 				<Route path="/results">
-					<Results
-						solos={solos}
-						// search={search}
-					/>
+					<Results solos={solos} />
 				</Route>
 				<Route exact path="/">
 					<Home />
