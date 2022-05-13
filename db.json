@@ -1,44 +1,52 @@
 {
-	"solos": [
-		{
-			"id": 1,
-			"name": "Gary Burton",
-			"title": "Chega de Saudade",
-			"instrument": "Vibraphone",
-			"inst_pic": "./Vibraphone.png",
-			"rating": "1"
-		},
-		{
-			"id": 2,
-			"name": "John S. Pratt",
-			"title": "Drum Corps on the March",
-			"instrument": "Snare Drum",
-			"inst_pic": "./sd.png",
-			"rating": "1"
-		},
-		{
-			"id": 3,
-			"name": "Giovanni Hidalgo",
-			"title": "Conga Madness",
-			"instrument": "Congas",
-			"inst_pic": "./Congas.png",
-			"rating": "1"
-		},
-		{
-			"id": 4,
-			"name": "Vinnie Colaiuta",
-			"title": "Seven Days",
-			"instrument": "Drums",
-			"inst_pic": "./drums2.png",
-			"rating": "1"
-		},
-		{
-			"id": 5,
-			"name": "Eliot Carter",
-			"title": "March",
-			"instrument": "Timpani",
-			"inst_pic": "./Timpani.png",
-			"rating": "1"
-		}
-	]
+  "solos": [
+    {
+      "id": 1,
+      "name": "Gary Burton",
+      "title": "Chega de Saudade",
+      "instrument": "Vibraphone",
+      "inst_pic": "./Vibraphone.png",
+      "rating": "1"
+    },
+    {
+      "id": 2,
+      "name": "John S. Pratt",
+      "title": "Drum Corps on the March",
+      "instrument": "Snare Drum",
+      "inst_pic": "./sd.png",
+      "rating": "1"
+    },
+    {
+      "id": 3,
+      "name": "Giovanni Hidalgo",
+      "title": "Conga Madness",
+      "instrument": "Congas",
+      "inst_pic": "./Congas.png",
+      "rating": "1"
+    },
+    {
+      "id": 4,
+      "name": "Vinnie Colaiuta",
+      "title": "Seven Days",
+      "instrument": "Drums",
+      "inst_pic": "./drums2.png",
+      "rating": "1"
+    },
+    {
+      "id": 5,
+      "name": "Eliot Carter",
+      "title": "March",
+      "instrument": "Timpani",
+      "inst_pic": "./Timpani.png",
+      "rating": "1"
+    },
+    {
+      "name": "Tommy",
+      "title": "Too Many Toms",
+      "instrument": "Toms",
+      "rating": "?",
+      "inst_pic": "https://usa.yamaha.com/files/tom_toms_25ec7c243989d6fd2ab87d68135fe6c2.jpg?impolicy=resize&imwid=1200&imhei=480",
+      "id": 6
+    }
+  ]
 }

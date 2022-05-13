@@ -3,9 +3,9 @@ import { Card, Image } from 'semantic-ui-react';
 
 function SoloCard({ solos: { id, name, title, instrument, inst_pic } }) {
 	return (
-		<div>
+		<div className="card">
 			<Card>
-				<Image src={inst_pic}></Image>
+				<Image src={inst_pic} />
 				<div className="content">
 					<div className="name">{name}</div>
 					<div className="title">{title}</div>

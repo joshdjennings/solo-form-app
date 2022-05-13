@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Form } from 'semantic-ui-react';
+import { useHistory } from 'react-router-dom';
 
 function SoloEntryForm({ setSolos }) {
 	const defaultState = {
@@ -11,6 +12,8 @@ function SoloEntryForm({ setSolos }) {
 	};
 
 	const [formData, setFormData] = useState(defaultState);
+
+	const history = useHistory();
 
 	const handleChange = (e) => {
 		const thingWeChange = e.target.name;
@@ -33,6 +36,15 @@ function SoloEntryForm({ setSolos }) {
 		fetch('http://localhost:3005/solos', configObj)
 			.then((r) => r.json())
 			.then((newSolo) => setSolos((mUV) => [...mUV, newSolo]));
+		history.push('/sololist');
+	};
+
+	const onSubmit = (e) => {
+		e.preventDefault();
+
+		// reset the form
+		setFormData(defaultState);
+		addNewSolo(formData);
 	};
 
 	return (
@@ -40,15 +52,7 @@ function SoloEntryForm({ setSolos }) {
 			<section id="entryForm">
 				<h1>This is the Entry Form</h1>
 				<p>Please enter your solo information here.</p>
-				<Form
-					onSubmit={(e) => {
-						e.preventDefault();
-
-						// reset the form
-						setFormData(defaultState);
-						addNewSolo(formData);
-					}}
-				>
+				<Form onSubmit={onSubmit}>
 					<Form.Group widths="equal">
 						<Form.Input
 							fluid

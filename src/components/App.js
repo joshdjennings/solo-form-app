@@ -19,8 +19,8 @@ function App() {
 		<div
 			className="App"
 			style={{
-				backgroundImage: 'url(/Drums.png)',
-				// backgroundRepeat: 'repeat',
+				backgroundImage: 'url(./Drums.png)',
+				backgroundRepeat: 'no-repeat',
 				height: '100vh',
 				backgroundSize: 'cover',
 			}}

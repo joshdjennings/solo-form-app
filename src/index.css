@@ -58,8 +58,13 @@ nav a:active {
 	color: #fcf15b;
 }
 
-#entryForm,
-#results {
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	width: 50vh;
+}
+
+#entryForm {
 	height: 70vh;
 	min-height: 100px;
 	background-color: #8b5bfc;
@@ -70,7 +75,8 @@ nav a:active {
 	padding: 1rem;
 }
 
-#home {
+#home,
+#results {
 	height: 50vh;
 	min-height: 200px;
 	background-color: #8b5bfc;
