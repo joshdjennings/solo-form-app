@@ -9,6 +9,7 @@ function Results({ solos }) {
 		<div>
 			<br />
 			<br />
+
 			<section id="results">
 				<h1>Results</h1>
 				<p>Search by Name</p>
@@ -16,18 +17,17 @@ function Results({ solos }) {
 				<button type="button" className="btn btn-primary">
 					Search
 				</button>
-
-				<table className="table table-striped table-dark">
-					<thead>
-						<tr>
-							<th scope="col">Name</th>
-							<th scope="col">Title</th>
-							<th scope="col">Rating</th>
-						</tr>
-					</thead>
-					<tbody>{soloRows}</tbody>
-				</table>
 			</section>
+			<table className="table table-striped table-dark">
+				<thead>
+					<tr>
+						<th scope="col">Name</th>
+						<th scope="col">Title</th>
+						<th scope="col">Rating</th>
+					</tr>
+				</thead>
+				<tbody>{soloRows}</tbody>
+			</table>
 		</div>
 	);
 }
