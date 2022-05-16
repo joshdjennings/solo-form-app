@@ -10,7 +10,7 @@ function SoloList({ solos }) {
 			<br />
 			<section id="soloList">
 				<h1>List of Solo Entries</h1>
-				<Card.Group itemsPerColumn={3}>
+				<Card.Group itemsPerRow={6}>
 					{solos.map((s) => (
 						<SoloCard key={s.id} solos={s} />
 					))}
