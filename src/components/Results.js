@@ -1,5 +1,5 @@
 import React from 'react';
-import Search from './Search';
+// import Search from './Search';
 import Ratings from './Ratings';
 
 function Results({ solos }) {
@@ -7,16 +7,8 @@ function Results({ solos }) {
 
 	return (
 		<div>
-			<br />
-			<br />
-
 			<section id="results">
 				<h1>Results</h1>
-				<p>Search by Name</p>
-				<Search solos={solos} />
-				<button type="button" className="btn btn-primary">
-					Search
-				</button>
 			</section>
 			<table className="table table-striped table-dark">
 				<thead>

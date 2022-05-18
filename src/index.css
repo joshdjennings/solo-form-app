@@ -100,7 +100,7 @@ nav a:active {
 
 #soloList,
 #results {
-	height: 30vh;
+	height: 25vh;
 	background-color: #8b5bfc;
 	display: flex;
 	align-items: center;

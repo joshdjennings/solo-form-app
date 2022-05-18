@@ -35,7 +35,7 @@ function SoloEntryForm({ setSolos }) {
 
 		fetch('http://localhost:3005/solos', configObj)
 			.then((r) => r.json())
-			.then((newSolo) => setSolos((mUV) => [...mUV, newSolo]));
+			.then((newSolo) => setSolos((solos) => [...solos, newSolo]));
 		history.push('/sololist');
 	};
 
