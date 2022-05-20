@@ -23,16 +23,13 @@ function App() {
 	return (
 		<div
 			className="App"
-			style={
-				{
-					backgroundImage: 'url(./Drums.png)',
-					backgroundRepeat: 'no-repeat',
-					height: '100vh',
-					backgroundSize: 'cover',
-				}
-
+			style={{
 				// possibly move this to index.css
-			}
+				backgroundImage: 'url(./Drums.png)',
+				backgroundRepeat: 'no-repeat',
+				height: '100vh',
+				backgroundSize: 'cover',
+			}}
 		>
 			<NavBar />
 			<Switch>

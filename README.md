@@ -1,80 +1,68 @@
-# Hierarchy
+# Music Solo Entry Form
 
-APP
-|--Home Page
-|----Solo Page State
-|------Search
-|----Solo Entry Form State, Post
-|----Collection
-|--------Card
+![Pokemon search screen recording](https://curriculum-content.s3.amazonaws.com/react/pokemon.gif)
 
-# Getting Started with Create React App
+(Note: If the gif isn't working, view it directly by navigating [here](https://curriculum-content.s3.amazonaws.com/react/pokemon.gif))
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Information
 
-## Available Scripts
+All the Solo information about can be found in the `db.json` file.
 
-In the project directory, you can run:
+Most of the css is in the `index.css` file. (Sorry, I'll get better at styling...)
 
-### `npm start`
+Run `yarn install` to install the dependencies.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Then, run `yarn run server` to start up `json-server` on `http://localhost:3005`.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+In another tab, run `yarn start` to start up my React app at `http://localhost:3000`.
 
-### `npm test`
+## Component hierarchy
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+App
+-->NavBar
+-->Home
+-->SoloEntryForm
+--SoloList
+---->SoloCard
+-->Results
+---->Ratings
 
-### `npm run build`
+## Project Goals
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Create an index displaying Pokemon 'cards'
+  - Render each Pokemon name, sprite, and hp in a card
+  - _When clicked_, the card should toggle between displaying the front and back
+    sprites
+- Allow users to search a Pokemon by its name in order to narrow down the cards
+  shown on the page
+- Wire up the form to add a missing Pokemon (Bulbasaur is missing, and you can
+  probably intuit the image links to use based on the data you have). Since
+  there aren't any validations, you may have to manually remove additions from
+  the `db.json` file if you make a mistake on a POST request, etc. When a new
+  Pokemon is added, it should show on the page without having to refresh.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Project Requirements
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- components using state and props
+- re-renders based on client-side events
+- can both get data from, and post data to the json server/database
 
-### `npm run eject`
+## Trying to Figure Out Where to Start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+For the most part, the framework for this application is already made, with a
+simple json server, and a React app, with all the components needed. When you
+run `npm start` a json server will spin up and you can access the Pokemon info
+at `http://localhost:3000/pokemon`, and your React application will also start,
+on port 3001.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Given a list of deliverables, our goal is to navigate the existing code base and
+implement several new features. Take some time to familiarize yourself with the
+structure of the application, and think about where you will be making changes
+in order to implement the new features. While you could solve this lab without
+creating new components, you are encouraged to do so if it makes sense to do
+that at any point.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Be sure to use good programming practices, such as clear variable names and
+single responsibility functions. We want our react app to be clean, easy to
+read and understand, and of course, easy to to debug, or even add more
+features to later.
