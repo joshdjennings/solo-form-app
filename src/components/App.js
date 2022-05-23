@@ -33,10 +33,10 @@ function App() {
 		>
 			<NavBar />
 			<Switch>
-				<Route path="/entryform">
+				<Route path="/solos/new">
 					<SoloEntryForm setSolos={setSolos} />
 				</Route>
-				<Route path="/sololist">
+				<Route path="/solos">
 					<SoloList solos={solos} onDeleteSolo={handleDeleteSolo} />
 				</Route>
 				<Route path="/results">
